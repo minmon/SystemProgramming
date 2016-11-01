@@ -19,11 +19,11 @@ int hello();
 int house_keeping();
 
 int main(void)
-{	
+{
 	int priority[] = {2,1};
 
 	event.event_priority = &*(priority);
-	event.event_size = 2;
+	event.event_size = sizeof(priority);
 
 	event.greeting = (void *) &hello;
 	event.services = (void *) &house_keeping;
